@@ -1,0 +1,23 @@
+site_name: Moje projekty
+site_author: Dominik Grzelak
+site_description: >-
+    Portfolio moich wspaniałych projektów z Data Science i AI!
+
+theme:
+  name: material
+
+nav:
+- Strona Domowa: index.md
+- Projekty komercyjne:
+  - "Data Manipulation Skills": Data Manipulation Skills/index.md
+  - "Aplikacja do Transkrypcji": "Aplikacja_do_transkrypcji/index.md"
+  - 'Panel sprzedażowy' : "Panel Sprzedażowy/index.md"
+  #- Baza wektorowa
+  #- Aplikacja do transkrybcji
+- Projekty naukowe:
+  - "Monitorowany LLM": Monitorowany_LLM/index.md
+  - "E-commerce Decision Tree": E-commerce Decision Tree/index.md
+  - "Przewidywanie cen ubezpieczeń": Przewidywanie cen ubezpieczeń/index.md
+  #- "Uber Analysis"
+  #- "DNA Analysis"
+

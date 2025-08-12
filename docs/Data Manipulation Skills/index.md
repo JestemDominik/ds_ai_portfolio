@@ -1,0 +1,58 @@
+# Automatyczne łączenie danych sprzedażowych Allegro z dokumentami księgowymi z Optima
+
+### 🔧 Problem
+
+W naszej firmie księgowa spędzała wiele godzin każdego miesiąca na ręcznym łączeniu transakcji z Allegro z dokumentami księgowymi z systemu Optima. Proces polegał na:
+
+* przeszukiwaniu dziennych raportów sprzedaży z Allegro,
+* dopasowywaniu ich do odpowiednich kontrahentów w systemie księgowym,
+* porównywaniu dat i kwot,
+* przypisywaniu numeru dokumentu księgowego do każdej transakcji.
+
+Jest to proces monotonny, żmudny i podatny na błędy — a jednocześnie bardzo ważny dla prawidłowego rozliczenia podatkowego i zgodności dokumentacji.
+
+---
+
+### 💡 Rozwiązanie
+
+Wspólnie z CTO opracowaliśmy automatyczny pipeline łączenia danych, który:
+
+1. **Wczytuje raporty sprzedażowe z Allegro i eksport z systemu Optima** (z ostatnich 6 miesięcy).
+
+2. **Przetwarza dane:**
+oczyszcza z duplikatów, normalizuje daty i kwoty (w tym przelicza formaty typu "48,99 zł") i redukuje formaty dat do dnia (ignorując godziny).
+
+3. **Łączy dane na podstawie:**
+dopasowania nazwiska klienta (z uwzględnieniem duplikatów), podobnej daty (z tolerancją ±1 dzień) i identycznej lub bardzo zbliżonej kwoty.
+
+4. **Generuje nowy raport**
+, w którym każdej transakcji Allegro przypisywany jest numer paragonu z systemu księgowego (jeśli możliwy do odnalezienia).
+
+---
+
+### ✅ Efekt
+
+* Z 1175 transakcji udało się automatycznie przypisać dokument księgowy do **1745 przypadków**.
+* W szczególności:
+
+  * wykryto transakcje bez dokumentów,
+  * zidentyfikowano i przefiltrowano duplikaty,
+  * wykryto transakcje z niepasującą datą lub kwotą,
+  * oznaczono **2 podejrzane przypadki** (zostaną ręcznie zweryfikowane przez księgową).
+* Raport jest gotowy do pobrania, posortowany i oczyszczony z niepotrzebnych kolumn.
+
+---
+
+### 🛠️ Technologie
+
+* **Jupyter Notebook** – szybkie prototypowanie i analiza danych.
+* **Pandas** – przetwarzanie i łączenie danych.
+* **NumPy / datetime** – logika dopasowywania dat i kwot.
+* **Streamlit (w planach)** – ewentualne wdrożenie jako narzędzie biurowe.
+
+---
+
+### 🧾 Załącznik
+Notebook `.ipynb`, który zawiera pełen pipeline i komentarze wyjaśniające każdy krok. Dane zostały usunięte ze względu na RODO.
+
+<a href="automatyzacja_2025_presentation (1).ipynb" class="md-button md-button--primary">Pobierz</a>
