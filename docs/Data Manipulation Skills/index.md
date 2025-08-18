@@ -15,18 +15,18 @@ Jest to proces monotonny, żmudny i podatny na błędy — a jednocześnie bardz
 
 ### 💡 Rozwiązanie
 
-Wspólnie z CTO opracowaliśmy automatyczny pipeline łączenia danych, który:
+Wspólnie z CTO opracowaliśmy pomysł na połączenie tych danych, który:
 
 1. **Wczytuje raporty sprzedażowe z Allegro i eksport z systemu Optima** (z ostatnich 6 miesięcy).
 
 2. **Przetwarza dane:**
-oczyszcza z duplikatów, normalizuje daty i kwoty (w tym przelicza formaty typu "48,99 zł") i redukuje formaty dat do dnia (ignorując godziny).
+oczyszcza z duplikatów, normalizuje daty i kwoty (w tym przelicza formaty typu "48,99 zł") i redukuje formaty dat do dnia (ignorując godziny), analizuje podejrzane rekordy.
 
 3. **Łączy dane na podstawie:**
 dopasowania nazwiska klienta (z uwzględnieniem duplikatów), podobnej daty (z tolerancją ±1 dzień) i identycznej lub bardzo zbliżonej kwoty.
 
 4. **Generuje nowy raport**
-, w którym każdej transakcji Allegro przypisywany jest numer paragonu z systemu księgowego (jeśli możliwy do odnalezienia).
+W którym każdej transakcji Allegro przypisywany jest numer paragonu z systemu księgowego (jeśli możliwy do odnalezienia).
 
 ---
 
