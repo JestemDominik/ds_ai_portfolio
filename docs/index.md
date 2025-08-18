@@ -2,7 +2,7 @@
 
 ## O mnie 
 
-Jestem początkującym Data Scientistem, który w ciągu pół roku intensywnej nauki i praktyki zbudował solidne podstawy w uczeniu maszynowym, analizie danych i automatyzacji procesów. Zrealizowałem projekty o realnym wpływie biznesowym – od wektorowych baz danych po zaawansowane panele analityczne w Streamlit dla firmy z branży suplementów. Moim celem jest tworzenie rozwiązań teechnologicznych, które łączą dane z rzeczywistą wartością dla firm.
+Specjalista Data Science & AI z +1 roku doświadczeniem komercyjno-naukowego w budowie aplikacji ML, automatyzacji procesów biznesowych i wdrażaniu modeli w środowiskach produkcyjnych. Zrealizowałem projekty o realnym wpływie biznesowym – od wywiadów z pracownikami po szkolenie ich z technologii, które dla nich stworzyłem. Moim celem jest tworzenie rozwiązań teechnologicznych, które łączą dane z rzeczywistą wartością dla firm.
 
 ## Moje CV
 Znajduje się pod linkiem:
