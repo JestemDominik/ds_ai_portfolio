@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
       
       
 
@@ -629,14 +629,14 @@
 <p>Jest to proces monotonny, żmudny i podatny na błędy — a jednocześnie bardzo ważny dla prawidłowego rozliczenia podatkowego i zgodności dokumentacji.</p>
 <hr />
 <h3 id="rozwiazanie">💡 Rozwiązanie</h3>
-<p>Wspólnie z CTO opracowaliśmy automatyczny pipeline łączenia danych, który:</p>
+<p>Wspólnie z CTO opracowaliśmy pomysł na połączenie tych danych, który:</p>
 <ol>
 <li>
 <p><strong>Wczytuje raporty sprzedażowe z Allegro i eksport z systemu Optima</strong> (z ostatnich 6 miesięcy).</p>
 </li>
 <li>
 <p><strong>Przetwarza dane:</strong>
-oczyszcza z duplikatów, normalizuje daty i kwoty (w tym przelicza formaty typu "48,99 zł") i redukuje formaty dat do dnia (ignorując godziny).</p>
+oczyszcza z duplikatów, normalizuje daty i kwoty (w tym przelicza formaty typu "48,99 zł") i redukuje formaty dat do dnia (ignorując godziny), analizuje podejrzane rekordy.</p>
 </li>
 <li>
 <p><strong>Łączy dane na podstawie:</strong>
@@ -644,7 +644,7 @@ dopasowania nazwiska klienta (z uwzględnieniem duplikatów), podobnej daty (z t
 </li>
 <li>
 <p><strong>Generuje nowy raport</strong>
-, w którym każdej transakcji Allegro przypisywany jest numer paragonu z systemu księgowego (jeśli możliwy do odnalezienia).</p>
+W którym każdej transakcji Allegro przypisywany jest numer paragonu z systemu księgowego (jeśli możliwy do odnalezienia).</p>
 </li>
 </ol>
 <hr />
@@ -722,10 +722,10 @@ dopasowania nazwiska klienta (z uwzględnieniem duplikatów), podobnej daty (z t
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
   </body>
